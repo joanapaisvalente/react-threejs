@@ -12,15 +12,24 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 95%;
+    justify-content: center;
+  }
 `;
 
 const Left = styled.div`
   flex: 1;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Right = styled.div`
@@ -28,10 +37,19 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 56px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 48px;
+  }
 `;
 
 const WhatWeDo = styled.div`
@@ -51,6 +69,11 @@ const Subtitle = styled.h2`
 const Description = styled.p`
   font-size: 16px;
   color: lightgray;
+
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+    text-align: center;
+  }
 `;
 
 const Button = styled.button`
@@ -83,7 +106,7 @@ const Who = () => {
             <Subtitle>Who we are</Subtitle>
           </WhatWeDo>
           <Description>
-            a creative group of designers and developers with a passion for the
+            A creative group of designers and developers with a passion for the
             arts.
           </Description>
           <Button>See our work</Button>

@@ -10,14 +10,25 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    height: 200vh;
+  }
 `;
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 `;
 
 const Left = styled.div`
@@ -25,10 +36,24 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 95%;
+    flex: 1;
+    align-items: center;
+    height: 100vh;
+
+    scroll-snap-align: center;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 40px;
+
+  @media only screen and (max-width: 768px) {
+    width: 50%;
+    text-align: center;
+  }
 `;
 
 const WhatWeDo = styled.div`
@@ -48,6 +73,10 @@ const Subtitle = styled.h2`
 const Description = styled.p`
   font-size: 16px;
   color: lightgray;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const Button = styled.button`
@@ -64,7 +93,16 @@ const Button = styled.button`
 const Right = styled.div`
   flex: 3;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+
+    scroll-snap-align: center;
+  }
 `;
+
 const Image = styled.img`
   width: 500px;
   object-fit: contain;
@@ -75,6 +113,11 @@ const Image = styled.img`
   right: 0;
   margin: auto;
   animation: animate 2s infinite ease-in-out alternate;
+
+  @media only screen and (max-width: 768px) {
+    height: 95%;
+    width: 95%;
+  }
 
   @keyframes animate {
     to {

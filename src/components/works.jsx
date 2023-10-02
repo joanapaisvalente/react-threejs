@@ -15,16 +15,25 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 95%;
+  }
 `;
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const List = styled.ul`
@@ -49,6 +58,12 @@ const ListItem = styled.li`
   transition: background-position 500ms ease;
   cursor: pointer;
 
+  @media only screen and (max-width: 768px) {
+    font-size: 2em;
+    background-color: #fff;
+    -webkit-text-stroke: 0px;
+  }
+
   &:hover {
     background-position: 0 100%;
   }
@@ -56,6 +71,10 @@ const ListItem = styled.li`
 
 const Right = styled.div`
   flex: 1;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Works = () => {
