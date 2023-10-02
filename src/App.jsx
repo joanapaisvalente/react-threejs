@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Contact from "./components/Contact";
-import Hero from "./components/hero";
-import Who from "./components/who";
-import Works from "./components/works";
+import Contact from "./modules/contact/contact";
+import Who from "./modules/who/who";
+import Works from "./modules/work/works";
+import Hero from "./modules/home/hero";
 
 const Container = styled.div`
   height: 100vh;
